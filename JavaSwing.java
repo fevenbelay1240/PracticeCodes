@@ -35,10 +35,14 @@ public class JavaSwing extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         String s = text.getText();
-        if(s.length() < 3 || s.length() > 10){
-            label.setText("Enter a word between 3 to 10 letters ");
+        double num = Integer.parseInt(s);
+
+        if(e.getSource() == b){
+            num = Math.pow(num,2);
+            label.setText("" + num);
         }
         else {
+
             label.setText("You entered " + s);
         }
     }
