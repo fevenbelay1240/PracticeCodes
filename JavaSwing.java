@@ -8,20 +8,26 @@ public class JavaSwing {
         JFrame frame = new JFrame("Main Frame");
         //create a text field and set it's size
         JTextField text = new JTextField();
-        text.setBounds(50, 50, 150, 20);
+        text.setBounds(100, 50, 150, 20);
         //create a button with the text 'click here' inside and set it's size
         JButton b = new JButton("Click Here");
-        b.setBounds(50, 100, 95, 30);
+        b.setBounds(125, 100, 95, 30);
 
         //add actionListener to the button to make it responsive
         b.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //change the text once the button is clicked
-                text.setText("Just Clicked the button");
-            }
+                text.setText("Just Clicked the button");}
         });
+
+        //add labels
+        JLabel label = new JLabel("First Label");
+        label.setBounds(140, 70,100,30);
+        frame.add(label);
+        //add the button and text to the frame
         frame.add(b);
         frame.add(text);
+        //set frame size and layout and make it visible
         frame.setSize(400, 400);
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
